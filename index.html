@@ -10,6 +10,9 @@
     <!-- Barlow Font [for TITLES] -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <!-- Open Sans for Menu -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css'/>
     <link rel="stylesheet" href="./css/style.css">
@@ -21,50 +24,49 @@
     <!-- HEADER -->
     <section class="header">
         <div class="container-fluid">
-
-            <!-- Menu Section -->
-            <navbar class="site-menu">
+            <div class="left-hero">
                 <div class="logo">
-                    <img src="./img/logo-restaurant-2x-300x58.png" alt="logo ristorante">
-                </div>
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Culinary History</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Our Team</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Our Menu</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Takeout</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Bulletin</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">Reservations</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
-                </ul>
-            </navbar>
-
-            <!-- Hero Box -->
-            <div class="fluid-box">
+                    <a href="#"><img src="./img/logo-restaurant-2x-400x77.png" alt="logo ristorante"></a>
+                </div>               
                 <div class="active-box">
-                    <h1>
-                        <small>The best table in town</small>
+                    <h1 class="mr50 mb30">
+                        <small class="left-pseudo">The best table in town</small>
                         fine dining experience
                     </h1>
-                    <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
+                    <p class="mt30 mb30">Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
                     <button class="btn btn-black">Explore the menu</button>
                 </div>
+            </div>
+            <div class="right-hero">
+                <!-- Menu Section -->
+                <navbar class="site-menu">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Culinary History</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Our Team</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Our Menu</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Takeout <span class="new_prop">New</span></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Bulletin</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Reservations</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                    </ul>
+                </navbar>
                 <div class="active-img">
                     <img src="./img/slider52x.jpg" alt="main image restaurant">
                 </div>
@@ -76,10 +78,9 @@
     <section class="mission">
         <div class="container">
             <div class="mission-structure">
-
                 <div class="mission-box">
                     <p><span class="uppercase">Hac tellus, felis risus at</span> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate.</p>
-                    <h2>Food is our common ground, a universal experience.</h2>
+                    <h2 class="mb50">Food is our common ground, a universal experience.</h2>
                     <p>Tristique tempus condimentum diam donec. Condimentum ullamcorper sit elementum hendrerit mi nulla in consequat, ut. Metus, nullam sclerisque netus viverra dui.</p>
                     <img class="signature" src="./img/signature.jpg" alt="">
                 </div>
@@ -94,20 +95,20 @@
     <section class="offer">
         <div class="container">
             <div class="row">
-                <div class="info-box">
-                    <img src="" alt="">
+                <div class="info-box text-cen">
+                    <img class="mb30" src="./img/sushi-1.png" alt="">
                     <h4>The best table in town</h4>
                     <p>Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi torto id gravida aliquet.</p>
                     <button class="btn btn-white">Explore the menu</button>
                 </div>
-                <div class="info-box">
-                    <img src="" alt="">
+                <div class="info-box text-cen">
+                    <img class="mb30" src="./img/sushi-2.png" alt="">
                     <h4>Perfect for groups</h4>
                     <p>Quam eu proin sit massa condimentum. Volutpat non pulvinar aliquet nunc. Orci elementum in aliquet a gravida vivamus aliquanm turpis vitae.</p>
                     <button class="btn btn-white">Make a reservation</button>
                 </div>
-                <div class="info-box">
-                    <img src="" alt="">
+                <div class="info-box text-cen">
+                    <img class="mb30" src="./img/sushi-3.png" alt="">
                     <h4>Fresh produce everyday</h4>
                     <p>Hendrerit amet, volupat leo non, commodo maecenas scelerisque tincidunt. Morbi vuluptate morbi purus quisque sit sagittis orci elementum gravida.</p>
                     <button class="btn btn-white">Learn more about us</button>
