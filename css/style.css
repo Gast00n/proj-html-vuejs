@@ -348,8 +348,21 @@ p {
 }
 
 .offer .info-box h4 {
+    position: relative;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 65px;
+}
+
+.offer .info-box h4:after {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 75px;
+    height: 1px;
+    background: #bcbcbc;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .offer .info-box p {
