@@ -1,0 +1,23 @@
+/* Set-Up ******************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #030303;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Utility */
+
+/* Typo */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* SECTIONS ****************************************/
