@@ -482,7 +482,7 @@ p {
 .other-crit .crit-bg .critics-box {
     color: #fff;
     padding: 70px 130px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .other-crit .crit-bg:first-child {
@@ -550,6 +550,8 @@ p {
     color: #fff;
     margin-bottom: 50px;
 }
+
+/* Call To Action */
 
 .callTo {
     height: 700px;
@@ -649,7 +651,7 @@ p {
 /* Menu */
 
 .rest-menu {
-    padding: 200px 0;
+    padding: 200px;
 }
 
 .rest-menu .row {
@@ -657,41 +659,18 @@ p {
     align-items: center;
 }
 
-.rest-menu .row .info-box {
-    width: 500px;
+.rest-menu .row .rest-bg {
     background: #e8e8e8;
-    padding: 100px;
-
+    padding: 45px;
 }
 
 .menu-ele {
-    width: 400px;
     position: relative;
-}
-
-.rest-menu .row .active-menu {
-    margin-top:-100px;
-    color: #fff;
-    background: url('../img/misc22x.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.rest-menu .row .active-menu::after {
-    position: absolute;
-    content: '';
-    display: table;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    background: rgb(3,3,3);
-    background: linear-gradient(180deg, rgba(3,3,3,0.5) 0%, rgba(3,3,3,.25) 25%, rgba(3,3,3,.50) 50% );  
 }
 
 .rest-menu .row .info-box h4 {
-    padding: 100px 0;
+    font-size: 3rem;
+    padding-bottom: 75px;
 }
 
 .rest-menu .row .info-box h5 {
@@ -703,7 +682,7 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     position: absolute;
-    right: 80px;
+    right: 45px;
     top: 35px;
 }
 
@@ -713,9 +692,127 @@ p {
     line-height: 26px;
 }
 
-.rest-menu .row .active-menu p {
-    color:#fff;
+.rest-menu .row .rest-bg:nth-child(2) {
+    background: url('../img/misc22x.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top:-100px;
 }
+
+.rest-menu .row .rest-bg:nth-child(2)::before {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgb(3,3,3);
+    background: linear-gradient(180deg, rgba(3,3,3,0.75) 0%, rgba(3,3,3,.5) 25%);  
+}
+
+.rest-menu .row .rest-bg:nth-child(2) p,
+.rest-menu .row .rest-bg:nth-child(2) h4,
+.rest-menu .row .rest-bg:nth-child(2) h5 {
+    color: #fff;
+}
+
+/* Daily Specs */
+
+.specialities {
+    background: url('../img/hero42x.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.specialities .row {
+    justify-content: flex-start;
+}
+
+.box-specs {
+    flex-basis: 40%;
+    padding: 100px;
+    background: #030303;
+    color: #fff;
+}
+
+.box-specs h3 {
+    font-size: 75px;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.box-specs h3::after {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 75px;
+    height: 1px;
+    background: #bcbcbc;
+    bottom: -70px;
+    left: 0;
+}
+
+.box-specs small {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Footer */
+
+.footer {
+    background: url('../img/footer2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.footer .social-footer {
+    width: 550px;
+    padding: 200px 0;
+    margin: 0 auto;
+}
+
+.footer .social-footer img {
+    width: 300px;
+}
+
+.footer .social-footer p {
+    margin: 100px 0
+}
+
+.footer .social-footer ul li {
+    display: inline-block;
+    background: #fff;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+
+.footer .social-footer ul li a {
+    color: #030303;
+}
+
+/* Copy */
+
+.copyright {
+    background: #030303;
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+}
+
+.copyright p {
+    font-size: 12px;
+}
+
 
 
 
