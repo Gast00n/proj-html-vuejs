@@ -109,19 +109,7 @@ img {
     width: 100%;
 }
 
-.left-pseudo:before {
-    position: absolute;
-    content: '';
-    display: table;
-    width: 48px;
-    height: 1px;
-    background:  #bcbcbc;
-    top: 50%;
-    left: -90px;
-    transform: translateY(-50%);
-}
-
-.right-pseudo:after {
+.left-pseudo::before {
     position: absolute;
     content: '';
     display: table;
@@ -135,6 +123,7 @@ img {
 
 .btn {
     padding: 15px 30px;
+    cursor: pointer;
     background: transparent;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -175,6 +164,10 @@ img {
     padding: 30px;
 }
 
+.price {
+    font-weight: 700;
+    font-size: 14px;
+}
 
 /* Typo */
 a {
@@ -267,6 +260,17 @@ p {
     background-size: cover;
     flex-grow: 1;
     height: 100vh;
+    position: relative;
+}
+
+.header .right-hero::before {
+    position:absolute;
+    content: '';
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background: rgb(20,20,20);
+    background: linear-gradient(180deg, rgba(20,20,20,0.75) 0%, rgba(20,20,20,0.25) 25%, rgba(20,20,20,0) 50%);
 }
 
 .header .right-hero .site-menu {
@@ -374,3 +378,279 @@ p {
 .offer .info-box button {
     margin-bottom: 30px;
 }
+
+/* Hero Box 2 & Takeaway Section */
+
+.experience,
+.takeaway {
+    background: #030303;
+}
+
+.fluid-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 850px;
+    overflow: hidden;
+}
+
+.fluid-box .active-img {
+    width: 60%;
+}
+
+.fluid-box .active-box {
+    width: 40%;
+    align-self: center;
+    padding: 0 0 0 200px;
+}
+
+.fluid-box .active-box h2 {
+    color: #fff;
+}
+
+/* Critics & Rece */
+
+.critics {
+    padding: 50px 0;
+}
+
+.coursive-title {
+    position: relative;
+}
+
+.coursive-title h2 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    font-size: 3rem;
+    padding: 100px 0;
+}
+
+.coursive-title h2::after {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 75px;
+    height: 1px;
+    background: #bcbcbc;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-box {
+    display: flex;
+    overflow: hidden;
+    align-items: stretch;
+    background: #030303;
+}
+
+.main-box .img-box-crit {
+    width: 50%;
+}
+
+.main-box .img-box-crit img {
+    margin-bottom: -5px;
+}
+
+
+.main-box .critics-box {
+    z-index: 1;
+    height: 100%;
+    width: 50%;
+    align-self: center;
+    padding: 100px 130px;
+    color: #fff;
+}
+
+.other-crit {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    height: 100vh;
+}
+
+.other-crit .crit-bg {
+    position: relative;
+    color: #fff;
+    width: 48%;
+    display: flex;
+    align-items: center;
+}
+
+.other-crit .crit-bg .critics-box {
+    color: #fff;
+    padding: 70px 130px;
+    z-index: 1;
+}
+
+.other-crit .crit-bg:first-child {
+    background: url('../img/info52x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.other-crit .crit-bg:last-child {
+    background: url('../img/info12x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.other-crit .crit-bg::before {
+    position:absolute;
+    content: '';
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(3,3,3);
+    background: linear-gradient(180deg, rgba(3,3,3,1) 0%, rgba(3,3,3,.75) 25%, rgba(3,3,3,0) 50%);  
+}
+
+.critics-box p.name {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.critics-box p.rating {
+    color: #fff;
+    margin-bottom: 100px;
+    font-size: 14px;
+    position: relative;
+}
+
+.critics-box p.rating::after {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 75px;
+    height: 1px;
+    background: #bcbcbc;
+    bottom: -50px;
+    left: 0;
+}
+
+.critics-box p.rating i {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.critics-box p {
+    color: #fff;
+}
+
+.critics-box h3 {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.callTo {
+    height: 700px;
+    background: url('../img/page52x.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.callTo h5 {
+    position: absolute;
+    bottom: -663px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.callTo::before {
+    position: absolute;
+    content: '';
+    display: table;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgb(3,3,3);
+    background: linear-gradient(180deg, rgba(3,3,3,0) 0%, rgba(3,3,3,.4) 75%, rgba(3,3,3,.7) 100% );  
+}
+
+.callTo:hover h5 {
+    opacity: 1;
+}
+
+/* News & Proms */
+
+.proms .row .info-box {
+    height: 745px;
+    display: flex;
+    flex-direction: column;
+}
+
+.proms .row .info-box .img-prom-01 {
+    background: url('../img/blog92x-800x916.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    transition: transform 0.7s;
+}
+
+.proms .row .info-box .img-prom-02 {
+    background: url('../img/blog72x-800x916.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    transition: transform 0.7s;
+}
+
+.proms .row .info-box .img-prom-03 {
+    background: url('../img/blog82x-800x916.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    transition: transform 0.7s;
+}
+
+.text-prom {
+    padding: 30px 10px;
+    text-align: center;
+    color: #030303;
+    display: block;
+}
+
+.info-box:hover .text-prom {
+    display: none;
+}
+
+.text-prom h4 {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.text-prom p {
+    color: #030303;
+    font-size: 12px;
+    font-family: 'Lora', serif;
+}
+
+
+
+
+
+
+
+
+

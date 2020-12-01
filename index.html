@@ -13,6 +13,9 @@
     <!-- Open Sans for Menu -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <!-- Lora Font For Italic Title -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet"> 
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css'/>
     <link rel="stylesheet" href="./css/style.css">
@@ -126,9 +129,9 @@
                     <img src="./img/slider32x.jpg" alt="main image restaurant">
                 </div>
                 <div class="active-box">
-                    <h2>
-                        <small>The best table in town</small>
-                        fine dining experience
+                    <h2 class="mr50 mb30">
+                        <small class="left-pseudo">fine dining experience</small>
+                        The best table in town
                     </h2>
                     <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
                     <button class="btn btn-black">Explore the menu</button>
@@ -140,8 +143,15 @@
     <!-- Critics & Rece -->
     <section class="critics">
         <div class="container">
+            <div class="coursive-title text-cen">
+                <h2>What critics are saying about us</h2>
+            </div>
+
+            <!-- Main Critics -->
             <div class="main-box">
-                <img src="./img/blog72x-800x916.jpg" alt="">
+                <div class="img-box-crit">
+                    <img src="./img/blog72x-800x916.jpg" alt="">
+                </div>
                 <div class="critics-box">
                     <p class="name">Meggy Stewart</p>
                     <h3>New York Times</h3>
@@ -152,39 +162,45 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </p>
-                    <p>Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at. <br>
-                    Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                    <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                    <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
                     <button class="btn btn-black">Read full article</button>
                 </div>
             </div>
+
+            <!-- Other Critics -->
             <div class="other-crit">
-                <div class="critics-box">
-                    <p class="name">Mary Maxey</p>
-                    <h3>The Guardian</h3>
-                    <p class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </p>
-                    <p>Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at. <br>
-                    Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
-                    <button class="btn btn-black">Read full article</button>
+                <div class="crit-bg">
+                    <div class="critics-box">
+                        <p class="name">Mary Maxey</p>
+                        <h3>The Guardian</h3>
+                        <p class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                        <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                        <button class="btn btn-black">Read full article</button>
+                    </div>
                 </div>
-                <div class="critics-box">
-                    <p class="name">Patrick Monroe</p>
-                    <h3>Globe and Mail</h3>
-                    <p class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </p>
-                    <p>Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at. <br>
-                    Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
-                    <button class="btn btn-black">Read full article</button>
+                <div class="crit-bg">
+                    <div class="critics-box">
+                        <p class="name">Patrick Monroe</p>
+                        <h3>Globe and Mail</h3>
+                        <p class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                        <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                        <button class="btn btn-black">Read full article</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,30 +214,42 @@
     </section>
 
     <!-- News & Proms -->
-    <section class="proms">
+    <section class="proms mb50">
         <div class="container">
+            <div class="coursive-title text-cen">
+                <h2>Latest news & promotions</h2>
+            </div>
             <div class="row">
                 <div class="info-box">
-                    <img src="./img/blog92x-600x687.jpg" alt="">
-                    <h4>the best coffe in town</h4>
-                    <p>By admin | January 7th, 2020 | Categories: News</p>
+                    <div class="img-prom-01">
+                    </div>
+                    <div class="text-prom">
+                        <h4>the best coffe in town</h4>
+                        <p>By admin | January 7th, 2020 | Categories: News</p>
+                    </div>
                 </div>
                 <div class="info-box">
-                    <img src="./img/blog72x-600x687.jpg" alt="">
-                    <h4>discover our new menu</h4>
-                    <p>By admin | January 7th, 2020 | Categories: News</p>
+                    <div class="img-prom-02">
+                    </div>
+                    <div class="text-prom">
+                        <h4>discover our new menu</h4>
+                        <p>By admin | January 7th, 2020 | Categories: News</p>
+                    </div>
                 </div>
                 <div class="info-box">
-                    <img src="./img/blog82x-600x687.jpg" alt="">
-                    <h4>we now accept square</h4>
-                    <p>By admin | January 7th, 2020 | Categories: News</p>
+                    <div class="img-prom-03">
+                    </div>
+                    <div class="text-prom">
+                        <h4>we now accept square</h4>
+                        <p>By admin | January 7th, 2020 | Categories: News</p>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Takeaway -->
-    <section class="takeAway">
+    <section class="takeaway">
         <div class="container-fluid">
             <!-- Hero Box -->
             <div class="fluid-box">
@@ -229,8 +257,8 @@
                     <img src="./img/slider72x-scaled.jpg" alt="main image takeaway">
                 </div>
                 <div class="active-box">
-                    <h2>
-                        <small>Enjoy your meal at home</small>
+                    <h2  class="mr50 mb30">
+                        <small class="left-pseudo">Enjoy your meal at home</small>
                         takeout now available
                     </h2>
                     <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
