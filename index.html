@@ -22,382 +22,354 @@
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
+
 <body>
+
+    <main id="app">
     
-    <!-- HEADER -->
-    <section class="header">
-        <div class="container-fluid">
-            <div class="left-hero">
-                <div class="logo">
-                    <a href="#"><img src="./img/logo-restaurant-2x-400x77.png" alt="logo ristorante"></a>
-                </div>               
-                <div class="active-box">
-                    <h1 class="mr50 mb30">
-                        <small class="left-pseudo">The best table in town</small>
-                        fine dining experience
-                    </h1>
-                    <p class="mt30 mb30">Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
-                    <button class="btn btn-black">Explore the menu</button>
+        <!-- HEADER -->
+        <section class="header">
+            <div class="container-fluid">
+                <div class="left-hero">
+                    <div class="logo">
+                        <a href="#"><img :src="logo" alt="logo ristorante"></a>
+                    </div>               
+                    <div class="active-box">
+                        <h1 class="mr50 mb30">
+                            <small class="left-pseudo">The best table in town</small>
+                            fine dining experience
+                        </h1>
+                        <p class="mt30 mb30">Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
+                        <button class="btn btn-black">Explore the menu</button>
+                    </div>
+                </div>
+                <div class="right-hero">
+                    <!-- Menu Section -->
+                    <navbar class="site-menu">
+                        <ul class="menu-list">
+                            <li v-for="element in menu" class="menu-item">
+                                <a v-if="element.name != 'cart'" :href="element.url">{{element.name }}<span v-if="element.new === true" class="new_prop">New</span></a>
+                                <a v-else :href="element.url"><i class="fas fa-shopping-cart"></i><span v-if="element.new === true" class="new_prop">New</span></a>
+                            </li>
+                        </ul>
+                    </navbar>
+                    <div class="active-img">
+                        <img src="./img/slider52x.jpg" alt="main image restaurant">
+                    </div>
                 </div>
             </div>
-            <div class="right-hero">
-                <!-- Menu Section -->
-                <navbar class="site-menu">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Culinary History</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Our Team</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Our Menu</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Takeout <span class="new_prop">New</span></a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Bulletin</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Reservations</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </section>
+    
+        <!-- Mission -->
+        <section class="mission">
+            <div class="container">
+                <div class="mission-structure">
+                    <div class="mission-box">
+                        <p><span class="uppercase">Hac tellus, felis risus at</span> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate.</p>
+                        <h2 class="mb50">Food is our common ground, a universal experience.</h2>
+                        <p>Tristique tempus condimentum diam donec. Condimentum ullamcorper sit elementum hendrerit mi nulla in consequat, ut. Metus, nullam sclerisque netus viverra dui.</p>
+                        <img class="signature" src="./img/signature.jpg" alt="">
+                    </div>
+                    <div class="mission-img">
+                        <img src="./img/info22x.jpg" alt="experience image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Offer -->
+        <section class="offer">
+            <div class="container">
+                <div class="row">
+                    <div class="info-box text-cen">
+                        <img class="mb30" src="./img/sushi-1.png" alt="">
+                        <h4>The best table in town</h4>
+                        <p>Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi torto id gravida aliquet.</p>
+                        <button class="btn btn-white">Explore the menu</button>
+                    </div>
+                    <div class="info-box text-cen">
+                        <img class="mb30" src="./img/sushi-2.png" alt="">
+                        <h4>Perfect for groups</h4>
+                        <p>Quam eu proin sit massa condimentum. Volutpat non pulvinar aliquet nunc. Orci elementum in aliquet a gravida vivamus aliquanm turpis vitae.</p>
+                        <button class="btn btn-white">Make a reservation</button>
+                    </div>
+                    <div class="info-box text-cen">
+                        <img class="mb30" src="./img/sushi-3.png" alt="">
+                        <h4>Fresh produce everyday</h4>
+                        <p>Hendrerit amet, volupat leo non, commodo maecenas scelerisque tincidunt. Morbi vuluptate morbi purus quisque sit sagittis orci elementum gravida.</p>
+                        <button class="btn btn-white">Learn more about us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Hero Box - Experience -->
+        <section class="experience">
+            <div class="container-fluid">
+                <!-- Hero Box -->
+                <div class="fluid-box">
+                    <div class="active-img">
+                        <img src="./img/slider32x.jpg" alt="main image restaurant">
+                    </div>
+                    <div class="active-box">
+                        <h2 class="mr50 mb30">
+                            <small class="left-pseudo">fine dining experience</small>
+                            The best table in town
+                        </h2>
+                        <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
+                        <button class="btn btn-black">Explore the menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Critics & Rece -->
+        <section class="critics">
+            <div class="container">
+                <div class="coursive-title text-cen">
+                    <h2>What critics are saying about us</h2>
+                </div>
+    
+                <!-- Main Critics -->
+                <div class="main-box">
+                    <div class="img-box-crit">
+                        <img src="./img/blog72x-800x916.jpg" alt="">
+                    </div>
+                    <div class="critics-box">
+                        <p class="name">Meggy Stewart</p>
+                        <h3>New York Times</h3>
+                        <p class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                        <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                        <button class="btn btn-black">Read full article</button>
+                    </div>
+                </div>
+    
+                <!-- Other Critics -->
+                <div class="other-crit">
+                    <div class="crit-bg">
+                        <div class="critics-box">
+                            <p class="name">Mary Maxey</p>
+                            <h3>The Guardian</h3>
+                            <p class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                            <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                            <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                            <button class="btn btn-black">Read full article</button>
+                        </div>
+                    </div>
+                    <div class="crit-bg">
+                        <div class="critics-box">
+                            <p class="name">Patrick Monroe</p>
+                            <h3>Globe and Mail</h3>
+                            <p class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                            <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
+                            <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
+                            <button class="btn btn-black">Read full article</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Call to Action -->
+        <section class="callTo">
+            <div class="container-fluid">
+                <h5>Kung Pao Chicken <span class="price">- $32</span></h5>
+            </div>
+        </section>
+    
+        <!-- News & Proms -->
+        <section class="proms mb50">
+            <div class="container">
+                <div class="coursive-title text-cen">
+                    <h2>Latest news & promotions</h2>
+                </div>
+                <div class="row">
+                    <div class="info-box">
+                        <div class="img-prom-01">
+                        </div>
+                        <div class="text-prom">
+                            <h4>the best coffe in town</h4>
+                            <p>By admin | January 7th, 2020 | Categories: News</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="img-prom-02">
+                        </div>
+                        <div class="text-prom">
+                            <h4>discover our new menu</h4>
+                            <p>By admin | January 7th, 2020 | Categories: News</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="img-prom-03">
+                        </div>
+                        <div class="text-prom">
+                            <h4>we now accept square</h4>
+                            <p>By admin | January 7th, 2020 | Categories: News</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Takeaway -->
+        <section class="takeaway">
+            <div class="container-fluid">
+                <!-- Hero Box -->
+                <div class="fluid-box">
+                    <div class="active-img">
+                        <img src="./img/slider72x-scaled.jpg" alt="main image takeaway">
+                    </div>
+                    <div class="active-box">
+                        <h2  class="mr50 mb30">
+                            <small class="left-pseudo">Enjoy your meal at home</small>
+                            takeout now available
+                        </h2>
+                        <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
+                        <button class="btn btn-black"><i class="fas fa-car"></i> view takeout menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="rest-menu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="rest-bg">
+                        <div class="info-box">
+                            <ul class="menu-list">
+                                <li>
+                                    <h4>Hors d'oeuvres</h4>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>ahi salmon nigiri <small class="price">$48</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>umi masi salad <small class="price">$21</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>temaki with crab <small class="price">$32</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>california rolls <small class="price">$22</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rest-bg">
+                        <div class="info-box">
+                            <ul class="menu-list">
+                                <li>
+                                    <h4>Main Course</h4>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>braised abalone <small class="price">$52</small></h5>
+                                    <p>Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>twice cooked pork<small class="price">$21</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>kung pad chicken<small class="price">$32</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>char siu & sushis <small class="price">$48</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rest-bg">
+                        <div class="info-box">
+                            <ul class="menu-list">
+                                <li>
+                                    <h4>Desserts</h4>
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>Cholate ball cake<small class="price">$13</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>Lime pie with crust<small class="price">$14</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>raspberry pear cake<small class="price">$18</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
+                                </li>
+                                <li class="menu-ele">
+                                    <h5>cafè au lait<small class="price">$6</small></h5>
+                                    <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!-- Daily Specs -->
+        <section class="specialities">
+            <div class="container">
+                <div class="row">
+                    <div class="box-specs">
+                        <h3>Braised abalone <small class="price">$52</small></h3>
+                        <p class="mb50">Pretium accumsan porttitor viverra leo gravida mollis imperdiet. Fringilla nibh pharetra sociis leo amet.</p>
+                        <button class="btn btn-black">View in the menu</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <section class="footer text-cen">
+            <div class="container-fluid">
+                <div class="social-footer">
+                    <!-- Info Footer -->
+                    <img :src="logo" alt="logo restaurant">
+                    <p>{{footerText}}</p>
+                    <ul class="social-list">
+                        <li v-for="social in footerSocial" class="social-ele">
+                            <a :href="social.url"><i :class="['fab', social.icon]"></i></a>
                         </li>
                     </ul>
-                </navbar>
-                <div class="active-img">
-                    <img src="./img/slider52x.jpg" alt="main image restaurant">
                 </div>
+    
             </div>
+        </section>
+        <!-- Copy -->
+        <div class="copyright">
+            <p>{{copy}}</p>
         </div>
-    </section>
-
-    <!-- Mission -->
-    <section class="mission">
-        <div class="container">
-            <div class="mission-structure">
-                <div class="mission-box">
-                    <p><span class="uppercase">Hac tellus, felis risus at</span> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate.</p>
-                    <h2 class="mb50">Food is our common ground, a universal experience.</h2>
-                    <p>Tristique tempus condimentum diam donec. Condimentum ullamcorper sit elementum hendrerit mi nulla in consequat, ut. Metus, nullam sclerisque netus viverra dui.</p>
-                    <img class="signature" src="./img/signature.jpg" alt="">
-                </div>
-                <div class="mission-img">
-                    <img src="./img/info22x.jpg" alt="experience image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offer -->
-    <section class="offer">
-        <div class="container">
-            <div class="row">
-                <div class="info-box text-cen">
-                    <img class="mb30" src="./img/sushi-1.png" alt="">
-                    <h4>The best table in town</h4>
-                    <p>Sed aenean egestas ut aliquam turpis mauris, molestie. Vitae tellus tempor sem id tempus neque, tellus turpis turpis. Morbi torto id gravida aliquet.</p>
-                    <button class="btn btn-white">Explore the menu</button>
-                </div>
-                <div class="info-box text-cen">
-                    <img class="mb30" src="./img/sushi-2.png" alt="">
-                    <h4>Perfect for groups</h4>
-                    <p>Quam eu proin sit massa condimentum. Volutpat non pulvinar aliquet nunc. Orci elementum in aliquet a gravida vivamus aliquanm turpis vitae.</p>
-                    <button class="btn btn-white">Make a reservation</button>
-                </div>
-                <div class="info-box text-cen">
-                    <img class="mb30" src="./img/sushi-3.png" alt="">
-                    <h4>Fresh produce everyday</h4>
-                    <p>Hendrerit amet, volupat leo non, commodo maecenas scelerisque tincidunt. Morbi vuluptate morbi purus quisque sit sagittis orci elementum gravida.</p>
-                    <button class="btn btn-white">Learn more about us</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hero Box - Experience -->
-    <section class="experience">
-        <div class="container-fluid">
-            <!-- Hero Box -->
-            <div class="fluid-box">
-                <div class="active-img">
-                    <img src="./img/slider32x.jpg" alt="main image restaurant">
-                </div>
-                <div class="active-box">
-                    <h2 class="mr50 mb30">
-                        <small class="left-pseudo">fine dining experience</small>
-                        The best table in town
-                    </h2>
-                    <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
-                    <button class="btn btn-black">Explore the menu</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Critics & Rece -->
-    <section class="critics">
-        <div class="container">
-            <div class="coursive-title text-cen">
-                <h2>What critics are saying about us</h2>
-            </div>
-
-            <!-- Main Critics -->
-            <div class="main-box">
-                <div class="img-box-crit">
-                    <img src="./img/blog72x-800x916.jpg" alt="">
-                </div>
-                <div class="critics-box">
-                    <p class="name">Meggy Stewart</p>
-                    <h3>New York Times</h3>
-                    <p class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </p>
-                    <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
-                    <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
-                    <button class="btn btn-black">Read full article</button>
-                </div>
-            </div>
-
-            <!-- Other Critics -->
-            <div class="other-crit">
-                <div class="crit-bg">
-                    <div class="critics-box">
-                        <p class="name">Mary Maxey</p>
-                        <h3>The Guardian</h3>
-                        <p class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-                        <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
-                        <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
-                        <button class="btn btn-black">Read full article</button>
-                    </div>
-                </div>
-                <div class="crit-bg">
-                    <div class="critics-box">
-                        <p class="name">Patrick Monroe</p>
-                        <h3>Globe and Mail</h3>
-                        <p class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </p>
-                        <p class="mb20">Non arcu mauris tortor ultrices mollis tellus euismod fermentu. Habitant amet tincidunt id sapien accumsan sed at.</p>
-                        <p class="mb40">Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.</p>
-                        <button class="btn btn-black">Read full article</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="callTo">
-        <div class="container-fluid">
-            <h5>Kung Pao Chicken <span class="price">- $32</span></h5>
-        </div>
-    </section>
-
-    <!-- News & Proms -->
-    <section class="proms mb50">
-        <div class="container">
-            <div class="coursive-title text-cen">
-                <h2>Latest news & promotions</h2>
-            </div>
-            <div class="row">
-                <div class="info-box">
-                    <div class="img-prom-01">
-                    </div>
-                    <div class="text-prom">
-                        <h4>the best coffe in town</h4>
-                        <p>By admin | January 7th, 2020 | Categories: News</p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <div class="img-prom-02">
-                    </div>
-                    <div class="text-prom">
-                        <h4>discover our new menu</h4>
-                        <p>By admin | January 7th, 2020 | Categories: News</p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <div class="img-prom-03">
-                    </div>
-                    <div class="text-prom">
-                        <h4>we now accept square</h4>
-                        <p>By admin | January 7th, 2020 | Categories: News</p>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Takeaway -->
-    <section class="takeaway">
-        <div class="container-fluid">
-            <!-- Hero Box -->
-            <div class="fluid-box">
-                <div class="active-img">
-                    <img src="./img/slider72x-scaled.jpg" alt="main image takeaway">
-                </div>
-                <div class="active-box">
-                    <h2  class="mr50 mb30">
-                        <small class="left-pseudo">Enjoy your meal at home</small>
-                        takeout now available
-                    </h2>
-                    <p>Pellentesque vitae viverra risus, sagittis. Venenatis ridiculus scelerisque nisi in urna nulla. Sit tempor a et nisl, ac felis.</p>
-                    <button class="btn btn-black"><i class="fas fa-car"></i> view takeout menu</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="rest-menu">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="rest-bg">
-                    <div class="info-box">
-                        <ul class="menu-list">
-                            <li>
-                                <h4>Hors d'oeuvres</h4>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>ahi salmon nigiri <small class="price">$48</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>umi masi salad <small class="price">$21</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>temaki with crab <small class="price">$32</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>california rolls <small class="price">$22</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="rest-bg">
-                    <div class="info-box">
-                        <ul class="menu-list">
-                            <li>
-                                <h4>Main Course</h4>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>braised abalone <small class="price">$52</small></h5>
-                                <p>Mollis ornare sit sapien, sodales. Cursus duis proin semper quisque.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>twice cooked pork<small class="price">$21</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>kung pad chicken<small class="price">$32</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>char siu & sushis <small class="price">$48</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="rest-bg">
-                    <div class="info-box">
-                        <ul class="menu-list">
-                            <li>
-                                <h4>Desserts</h4>
-                            </li>
-                            <li class="menu-ele">
-                                <h5>Cholate ball cake<small class="price">$13</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
-                            </li>
-                            <li class="menu-ele">
-                                <h5>Lime pie with crust<small class="price">$14</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
-                            </li>
-                            <li class="menu-ele">
-                                <h5>raspberry pear cake<small class="price">$18</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
-                            </li>
-                            <li class="menu-ele">
-                                <h5>cafè au lait<small class="price">$6</small></h5>
-                                <p>Eget vulputate vitae quis rutrum blandi:sed. Quarr nulla sit acinia.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Daily Specs -->
-    <section class="specialities">
-        <div class="container">
-            <div class="row">
-                <div class="box-specs">
-                    <h3>Braised abalone <small class="price">$52</small></h3>
-                    <p class="mb50">Pretium accumsan porttitor viverra leo gravida mollis imperdiet. Fringilla nibh pharetra sociis leo amet.</p>
-                    <button class="btn btn-black">View in the menu</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="footer text-cen">
-        <div class="container-fluid">
-            <div class="social-footer">
-                <!-- Info Footer -->
-                <img src="./img/logo-restaurant-2x-400x77.png" alt="logo restaurant">
-                <p>Quam eu proin sit massa condimentum. Volupat non pulvinar aliquet nunc. Quam eu proin sit massa condimentum.</p>
-                <ul class="social-list">
-                    <li class="social-ele">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="social-ele">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li class="social-ele">
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
-                    <li class="social-ele">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="social-ele">
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>                        
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-    <!-- Copy -->
-    <div class="copyright">
-        <p>Copyright 2012 - 2019 Avada | All Rights Reserved | Powered by WordPress | ThemeFusion</p>
-    </div>
+    </main>
     
     <!-- JS INCLUDE -->
-    <script src=".js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
