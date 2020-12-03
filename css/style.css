@@ -682,13 +682,6 @@ p {
     display: block;
 }
 
-.info-box:hover .img-prom-01,
-.info-box:hover .img-prom-02,
-.info-box:hover .img-prom-03 {
-    flex-grow: 4.3;
-}
-
-
 .info-box:hover .text-prom {
     display: none;
 }
@@ -812,6 +805,11 @@ p {
 .rest-menu .row .rest-bg:nth-child(2) h4,
 .rest-menu .row .rest-bg:nth-child(2) h5 {
     color: #fff;
+}
+
+.rest-menu .row .rest-bg:nth-child(2) h4 {
+    position: relative;
+    z-index: 1;
 }
 
 /* Daily Specs */
