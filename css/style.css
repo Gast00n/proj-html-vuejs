@@ -333,12 +333,46 @@ p {
 
 .mission-structure .mission-box img {
     width: 175px;
-    
+    position: relative;
+}
+
+.mission-structure .mission-box img {
+    width: 175px;
 }
 
 .mission-structure .mission-img {
     width: 45%;
     padding: 0 30px 30px;
+    position: relative;
+}
+
+.mission-structure .mission-img img {
+    position: relative;
+    box-shadow: 0px 2px 2px rgba(20,20,20,0);
+
+}
+
+.mission-structure .mission-img img:hover {
+    box-shadow: 0px 4px 10px rgba(20,20,20,0.25);
+    transition: 0.7s;
+}
+
+.mission-structure .mission-img h5 {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.mission-structure .mission-img:hover h5 {
+    opacity: 1;
 }
 
 /* Offer */
@@ -441,7 +475,6 @@ p {
 
 .main-box {
     display: flex;
-    overflow: hidden;
     align-items: stretch;
     background: #030303;
 }
@@ -454,15 +487,24 @@ p {
     margin-bottom: -5px;
 }
 
+.main-box .black-box {
+    transition: transform 0.7s;
+    width: 50%;
+    background: #030303;
+}
+
+.main-box .black-box:hover,
+.main-box .black-box:focus {
+    z-index: 1;
+    transform:scale(1.03);}
 
 .main-box .critics-box {
-    z-index: 1;
     height: 100%;
-    width: 50%;
     align-self: center;
     padding: 100px 130px;
     color: #fff;
 }
+
 
 .other-crit {
     display: flex;
