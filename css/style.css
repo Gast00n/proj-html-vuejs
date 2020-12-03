@@ -100,7 +100,7 @@ img {
 
 .container {
     position: relative;
-    width: 1366px;
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -359,7 +359,7 @@ p {
 
 .mission-structure .mission-img h5 {
     position: absolute;
-    bottom: 55px;
+    bottom: 105px;
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
@@ -476,15 +476,13 @@ p {
 .main-box {
     display: flex;
     align-items: stretch;
-    background: #030303;
 }
 
 .main-box .img-box-crit {
     width: 50%;
-}
-
-.main-box .img-box-crit img {
-    margin-bottom: -5px;
+    background: url('../img/blog72x-800x916.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .main-box .black-box {
@@ -884,10 +882,10 @@ p {
     display: inline-block;
     background: #fff;
     width: 50px;
-    line-height: 48px;
+    line-height: 44px;
     border-radius: 50%;
     margin: 0 5px;
-    border: 1px transparent solid;
+    border: 3px transparent solid;
     cursor: pointer;
     transition: all .4s;
 }
@@ -895,7 +893,7 @@ p {
 
 .footer .social-footer ul li:hover {
     background: #030303;
-    border: 1px #fff solid;
+    border: 3px #fff solid;
 }
 
 .footer .social-footer ul li a {
